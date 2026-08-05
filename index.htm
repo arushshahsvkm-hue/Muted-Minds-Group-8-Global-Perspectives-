@@ -1,0 +1,310 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Home - Muted Minds</title>
+<style type="text/css">
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+body { 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  background-color: #f4f8fc; 
+  color: #1e293b; 
+  margin: 0; 
+  padding: 0; 
+  line-height: 1.7; 
+  animation: fadeIn 0.5s ease-out;
+}
+
+.header { 
+  background-color: #ffffff; 
+  border-bottom: 2px solid #e2e8f0; 
+  padding: 20px 40px; 
+  position: sticky; 
+  top: 0; 
+  z-index: 100; 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.nav { 
+  max-width: 1100px; 
+  margin: 0 auto; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.logo { 
+  font-size: 24px; 
+  font-weight: 800; 
+  color: #0a2540; 
+  text-decoration: none; 
+  letter-spacing: -0.5px;
+}
+.logo span { color: #2563eb; }
+
+.nav-links { 
+  list-style: none; 
+  margin: 0; 
+  padding: 0; 
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.nav-links a { 
+  text-decoration: none; 
+  color: #475569; 
+  font-weight: 600; 
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.25s ease;
+}
+
+.nav-links a:hover, .nav-links a.active { 
+  color: #1a56db; 
+  background-color: #eff6ff; 
+}
+
+.container { 
+  max-width: 1100px; 
+  margin: 40px auto; 
+  padding: 0 25px; 
+}
+
+.hero { 
+  background: linear-gradient(135deg, #1a56db 0%, #0a2540 100%); 
+  color: #ffffff;
+  padding: 70px 40px; 
+  border-radius: 16px; 
+  text-align: center; 
+  margin-bottom: 40px; 
+  box-shadow: 0 10px 25px rgba(26, 86, 219, 0.15);
+}
+
+.hero h1 { 
+  color: #ffffff; 
+  margin-top: 0; 
+  font-size: 36px; 
+  letter-spacing: -0.5px;
+}
+
+.hero p { 
+  color: #dbeafe; 
+  font-size: 19px; 
+  max-width: 750px; 
+  margin: 20px auto 30px auto; 
+}
+
+.btn { 
+  display: inline-block; 
+  background-color: #2563eb; 
+  color: #ffffff; 
+  padding: 14px 30px; 
+  border-radius: 8px; 
+  text-decoration: none; 
+  font-weight: 700; 
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  transition: all 0.25s ease;
+}
+
+.btn:hover { 
+  background-color: #1d4ed8; 
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
+}
+
+.btn-hero {
+  background-color: #ffffff;
+  color: #1a56db;
+}
+
+.btn-hero:hover {
+  background-color: #eff6ff;
+  color: #1d4ed8;
+}
+
+.section-block { 
+  background-color: #ffffff; 
+  padding: 40px; 
+  border-radius: 14px; 
+  border: 1px solid #e2e8f0; 
+  margin-bottom: 40px; 
+  box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+.section-title { 
+  color: #0a2540; 
+  border-bottom: 3px solid #2563eb; 
+  padding-bottom: 10px; 
+  margin-top: 0; 
+  font-size: 24px;
+}
+
+.card-grid { 
+  display: flex; 
+  gap: 25px; 
+  margin-top: 25px; 
+  flex-wrap: wrap; 
+}
+
+.card { 
+  background-color: #ffffff; 
+  padding: 30px; 
+  border-radius: 12px; 
+  border: 1px solid #e2e8f0; 
+  flex: 1; 
+  min-width: 280px; 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.card-blue { border-top: 5px solid #2563eb; }
+
+.placeholder-box { 
+  background-color: #f8fafc; 
+  border: 2px dashed #94a3b8; 
+  padding: 35px; 
+  text-align: center; 
+  border-radius: 10px; 
+  margin: 25px 0; 
+  color: #475569; 
+}
+
+.pending-badge {
+  display: inline-block;
+  background-color: #eff6ff;
+  color: #1a56db;
+  border: 1px solid #bfdbfe;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.footer { 
+  background-color: #ffffff; 
+  border-top: 1px solid #e2e8f0; 
+  padding: 35px 20px; 
+  text-align: center; 
+  font-size: 14px; 
+  color: #64748b; 
+  margin-top: 60px; 
+}
+
+.footer a { 
+  color: #1a56db; 
+  text-decoration: none; 
+  margin: 0 8px; 
+  font-weight: 500;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .header { padding: 15px 20px; }
+  .nav { flex-direction: column; align-items: flex-start; }
+  .nav-links { gap: 10px; width: 100%; justify-content: flex-start; }
+  .hero { padding: 40px 20px; }
+  .hero h1 { font-size: 28px; }
+  .section-block { padding: 25px; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="nav">
+    <a href="index.htm" class="logo">Muted<span>Minds</span></a>
+    <ul class="nav-links">
+      <li><a href="index.htm" class="active">Home</a></li>
+      <li><a href="about.htm">About</a></li>
+      <li><a href="statistics.htm">Statistics</a></li>
+      <li><a href="solutions.htm">Solutions</a></li>
+      <li><a href="interactive.htm">Interactive</a></li>
+      <li><a href="FAQ.htm">FAQ</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- HERO SECTION -->
+  <div class="hero">
+    <h1>Understanding the Connected Generation</h1>
+    <p>Exploring how modern social media platforms shape adolescent psychological development, emotional resilience, and self-identity.</p>
+    <a href="interactive.htm" class="btn btn-hero">Take the Self-Reflection Quiz</a>
+  </div>
+
+  <!-- SECTION 1: OVERVIEW -->
+  <div class="section-block">
+    <h2 class="section-title">The Digital Landscape for Today's Youth</h2>
+    <p>Adolescence is a vital developmental phase marked by identity formation, social bonding, and heightened emotional sensitivity. Modern social platforms offer unprecedented opportunities for connection, but they also introduce unique mental health challenges.</p>
+    
+    <div class="placeholder-box">
+      <span class="pending-badge">Status: Pending</span><br />
+      <strong>[ INSERT HERO IMAGE OR INFOGRAPHIC HERE ]</strong>
+      <br /><em>Example: Diagram showing screen time vs. emotional well-being</em>
+    </div>
+  </div>
+
+  <!-- SECTION 2: THREE PILLARS -->
+  <h2 style="margin-top: 40px; color: #0a2540;">Core Areas of Focus</h2>
+  <div class="card-grid">
+    <div class="card card-blue">
+      <h3 style="color: #0a2540; margin-top: 0;">1. Emotional Well-being</h3>
+      <p>Continuous notifications and infinite scrolling loops can increase cognitive load, disrupt circadian rhythms, and elevate daily anxiety levels.</p>
+    </div>
+    <div class="card card-blue">
+      <h3 style="color: #0a2540; margin-top: 0;">2. Social &amp; Identity</h3>
+      <p>Quantifiable social feedback like likes, comments, and follower counts heavily influences self-perception during critical peer-building years.</p>
+    </div>
+    <div class="card card-blue">
+      <h3 style="color: #0a2540; margin-top: 0;">3. Digital Resilience</h3>
+      <p>Learning healthy boundaries and active consumption habits allows adolescents to enjoy online spaces without compromising mental health.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 3: KEY HIGHLIGHTS -->
+  <div class="section-block" style="margin-top: 40px;">
+    <h2 class="section-title">Why This Topic Matters Right Now</h2>
+    <p>With smartphones becoming near-universal among teenagers, understanding the subtle psychological mechanisms behind algorithms and screen time is essential for teens, educators, and parents alike.</p>
+    
+    <div class="placeholder-box">
+      <span class="pending-badge">Status: Pending</span><br />
+      <strong>[ INSERT DATA CHART OR SUMMARY GRAPH HERE ]</strong>
+      <br /><em>Example: Bar chart showing average daily hours spent across popular apps</em>
+    </div>
+  </div>
+
+  <!-- SECTION 4: CALL TO ACTION -->
+  <div class="section-block" style="text-align: center; background-color: #eff6ff; border-color: #bfdbfe;">
+    <h2 style="color: #0a2540; margin-top: 0;">Explore Our Research &amp; Tools</h2>
+    <p style="color: #334155;">Dive into our statistical insights, learn actionable boundary-setting solutions, or test your own scrolling habits with our interactive check-in.</p>
+    <a href="statistics.htm" class="btn">View Statistics</a>
+  </div>
+
+</div>
+
+<div class="footer">
+  <p>&copy; 2026 Muted Minds Project | <a href="index.htm">Home</a> | <a href="about.htm">About</a> | <a href="statistics.htm">Statistics</a> | <a href="solutions.htm">Solutions</a> | <a href="interactive.htm">Interactive</a> | <a href="FAQ.htm">FAQ</a></p>
+</div>
+
+</body>
+</html>

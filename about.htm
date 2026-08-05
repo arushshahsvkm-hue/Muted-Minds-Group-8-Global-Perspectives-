@@ -1,0 +1,251 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About - Muted Minds</title>
+<style type="text/css">
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+body { 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  background-color: #f4f8fc; 
+  color: #1e293b; 
+  margin: 0; 
+  padding: 0; 
+  line-height: 1.7; 
+  animation: fadeIn 0.5s ease-out;
+}
+
+.header { 
+  background-color: #ffffff; 
+  border-bottom: 2px solid #e2e8f0; 
+  padding: 20px 40px; 
+  position: sticky; 
+  top: 0; 
+  z-index: 100; 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.nav { 
+  max-width: 1100px; 
+  margin: 0 auto; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.logo { 
+  font-size: 24px; 
+  font-weight: 800; 
+  color: #0a2540; 
+  text-decoration: none; 
+  letter-spacing: -0.5px;
+}
+.logo span { color: #2563eb; }
+
+.nav-links { 
+  list-style: none; 
+  margin: 0; 
+  padding: 0; 
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.nav-links a { 
+  text-decoration: none; 
+  color: #475569; 
+  font-weight: 600; 
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.25s ease;
+}
+
+.nav-links a:hover, .nav-links a.active { 
+  color: #1a56db; 
+  background-color: #eff6ff; 
+}
+
+.container { 
+  max-width: 1100px; 
+  margin: 40px auto; 
+  padding: 0 25px; 
+}
+
+.section-block { 
+  background-color: #ffffff; 
+  padding: 40px; 
+  border-radius: 14px; 
+  border: 1px solid #e2e8f0; 
+  margin-bottom: 30px; 
+  box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+.section-title { 
+  color: #0a2540; 
+  border-bottom: 3px solid #2563eb; 
+  padding-bottom: 10px; 
+  margin-top: 0; 
+  font-size: 24px;
+}
+
+.card-grid { 
+  display: flex; 
+  gap: 25px; 
+  margin-top: 25px; 
+  flex-wrap: wrap; 
+}
+
+.card { 
+  background-color: #ffffff; 
+  padding: 30px; 
+  border-radius: 12px; 
+  border: 1px solid #e2e8f0; 
+  flex: 1; 
+  min-width: 280px; 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.card-blue { border-top: 5px solid #2563eb; }
+
+.placeholder-box { 
+  background-color: #f8fafc; 
+  border: 2px dashed #94a3b8; 
+  padding: 35px; 
+  text-align: center; 
+  border-radius: 10px; 
+  margin: 25px 0; 
+  color: #475569; 
+}
+
+.pending-badge {
+  display: inline-block;
+  background-color: #eff6ff;
+  color: #1a56db;
+  border: 1px solid #bfdbfe;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.footer { 
+  background-color: #ffffff; 
+  border-top: 1px solid #e2e8f0; 
+  padding: 35px 20px; 
+  text-align: center; 
+  font-size: 14px; 
+  color: #64748b; 
+  margin-top: 60px; 
+}
+
+.footer a { 
+  color: #1a56db; 
+  text-decoration: none; 
+  margin: 0 8px; 
+  font-weight: 500;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .header { padding: 15px 20px; }
+  .nav { flex-direction: column; align-items: flex-start; }
+  .nav-links { gap: 10px; width: 100%; justify-content: flex-start; }
+  .section-block { padding: 25px; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="nav">
+    <a href="index.htm" class="logo">Muted<span>Minds</span></a>
+    <ul class="nav-links">
+      <li><a href="index.htm">Home</a></li>
+      <li><a href="about.htm" class="active">About</a></li>
+      <li><a href="statistics.htm">Statistics</a></li>
+      <li><a href="solutions.htm">Solutions</a></li>
+      <li><a href="interactive.htm">Interactive</a></li>
+      <li><a href="FAQ.htm">FAQ</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="container">
+
+  <h1 style="color: #0a2540; font-size: 32px; margin-top: 0;">About the Muted Minds Initiative</h1>
+  <p style="font-size: 18px; color: #475569;">Providing evidence-based perspectives on adolescent psychology in the age of algorithmic media.</p>
+
+  <div class="section-block">
+    <h2 class="section-title">Our Mission &amp; Purpose</h2>
+    <p>The goal of this website is to provide clear, unbiased information regarding the psychological impacts of social media on youth. Rather than advocating for complete digital avoidance, we aim to encourage mindful consumption and healthy boundary setting.</p>
+    
+    <div class="placeholder-box">
+      <span class="pending-badge">Status: Pending</span><br />
+      <strong>[ INSERT PROJECT CONCEPT GRAPHIC OR TEAM IMAGE HERE ]</strong>
+      <br /><em>Example: Illustration of adolescent brain development and digital connectivity</em>
+    </div>
+  </div>
+
+  <h2 style="color: #0a2540; font-size: 26px; margin-top: 40px;">Key Psychological Frameworks</h2>
+  <div class="card-grid">
+    <div class="card card-blue">
+      <h3 style="color: #0a2540; margin-top: 0;">Social Comparison Theory</h3>
+      <p>Adolescents naturally compare themselves to peers. On social media, they compare their everyday reality to highly edited highlight reels, triggering envy and reduced self-worth.</p>
+    </div>
+    <div class="card card-blue">
+      <h3 style="color: #0a2540; margin-top: 0;">Dopamine Feedback Loops</h3>
+      <p>Platforms utilize variable reward schedules (likes, retweets, views) that stimulate dopamine release, training the brain to check devices repeatedly throughout the day.</p>
+    </div>
+    <div class="card card-blue">
+      <h3 style="color: #0a2540; margin-top: 0;">Fear Of Missing Out (FOMO)</h3>
+      <p>Constant visibility into peer activities can induce anxiety regarding social exclusion, driving teens to remain constantly plugged in—even late at night.</p>
+    </div>
+  </div>
+
+  <div class="section-block" style="margin-top: 40px;">
+    <h2 class="section-title">Who This Site Is For</h2>
+    <ul style="padding-left: 20px;">
+      <li style="margin-bottom: 10px;"><strong>Adolescents:</strong> Seeking to understand their relationship with social media and build better digital habits.</li>
+      <li style="margin-bottom: 10px;"><strong>Parents &amp; Caregivers:</strong> Looking for practical guidance on guiding screen time without causing conflict.</li>
+      <li style="margin-bottom: 10px;"><strong>Educators &amp; Counselors:</strong> Requiring structured resources for classroom discussion and student support.</li>
+    </ul>
+  </div>
+
+  <div class="section-block">
+    <h2 class="section-title">Our Research Approach</h2>
+    <p>Our information synthesizes studies from psychological associations, public health institutes, and independent media research organizations to give a balanced picture of both benefits and risks.</p>
+    
+    <div class="placeholder-box">
+      <span class="pending-badge">Status: Pending</span><br />
+      <strong>[ INSERT CITATION LIST OR RESEARCH LOGOS HERE ]</strong>
+      <br /><em>Example: Logos or links to referenced studies and health organizations</em>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <p>&copy; 2026 Muted Minds Project | <a href="index.htm">Home</a> | <a href="about.htm">About</a> | <a href="statistics.htm">Statistics</a> | <a href="solutions.htm">Solutions</a> | <a href="interactive.htm">Interactive</a> | <a href="FAQ.htm">FAQ</a></p>
+</div>
+
+</body>
+</html>
