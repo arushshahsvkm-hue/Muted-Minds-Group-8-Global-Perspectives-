@@ -1,0 +1,327 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Statistics - Muted Minds</title>
+<style type="text/css">
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 5px rgba(37, 99, 235, 0.2); }
+  50% { box-shadow: 0 0 20px rgba(37, 99, 235, 0.6); }
+  100% { box-shadow: 0 0 5px rgba(37, 99, 235, 0.2); }
+}
+
+body { 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  background-color: #f4f8fc; 
+  color: #1e293b; 
+  margin: 0; 
+  padding: 0; 
+  line-height: 1.7; 
+  animation: fadeIn 0.6s ease-out;
+}
+
+.header { 
+  background-color: #ffffff; 
+  border-bottom: 2px solid #e2e8f0; 
+  padding: 20px 40px; 
+  position: sticky; 
+  top: 0; 
+  z-index: 100; 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.nav { 
+  max-width: 1100px; 
+  margin: 0 auto; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.logo { 
+  font-size: 24px; 
+  font-weight: 800; 
+  color: #0a2540; 
+  text-decoration: none; 
+  letter-spacing: -0.5px;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+.logo:hover {
+  transform: scale(1.05);
+}
+.logo span { color: #2563eb; }
+
+.nav-links { 
+  list-style: none; 
+  margin: 0; 
+  padding: 0; 
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.nav-links a { 
+  text-decoration: none; 
+  color: #475569; 
+  font-weight: 600; 
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active { 
+  color: #1a56db; 
+  background-color: #eff6ff; 
+  border-color: #93c5fd;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.15);
+  transform: translateY(-2px);
+}
+
+.container { 
+  max-width: 1100px; 
+  margin: 40px auto; 
+  padding: 0 25px; 
+}
+
+.section-block { 
+  background-color: #ffffff; 
+  padding: 40px; 
+  border-radius: 14px; 
+  border: 2px solid #e2e8f0; 
+  margin-bottom: 30px; 
+  box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+  transition: all 0.35s ease;
+}
+
+.section-block:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.1);
+  transform: translateY(-3px);
+}
+
+.section-title { 
+  color: #0a2540; 
+  border-bottom: 3px solid #2563eb; 
+  padding-bottom: 10px; 
+  margin-top: 0; 
+  font-size: 24px;
+}
+
+.card-grid { 
+  display: flex; 
+  gap: 25px; 
+  margin-top: 25px; 
+  flex-wrap: wrap; 
+  perspective: 1000px;
+}
+
+.card { 
+  background-color: #ffffff; 
+  padding: 30px; 
+  border-radius: 12px; 
+  border: 2px solid #e2e8f0; 
+  flex: 1; 
+  min-width: 280px; 
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transform-style: preserve-3d;
+}
+
+.card:hover {
+  transform: translateY(-8px) rotateX(3deg) rotateY(-2deg) scale(1.02);
+  box-shadow: 0 15px 30px rgba(37, 99, 235, 0.15);
+  border-color: #2563eb;
+}
+
+.card-blue { border-top: 5px solid #2563eb; }
+
+.stat-number { 
+  font-size: 52px; 
+  font-weight: 800; 
+  color: #1a56db; 
+  margin-bottom: 5px; 
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .stat-number {
+  transform: scale(1.1);
+}
+
+.stat-label { 
+  font-weight: 700; 
+  color: #0a2540; 
+  margin-bottom: 12px; 
+  font-size: 19px; 
+}
+
+.placeholder-box { 
+  background-color: #f8fafc; 
+  border: 2px dashed #94a3b8; 
+  padding: 40px; 
+  text-align: center; 
+  border-radius: 10px; 
+  margin: 25px 0; 
+  color: #475569; 
+  transition: all 0.3s ease;
+}
+
+.placeholder-box:hover {
+  border-color: #2563eb;
+  background-color: #eff6ff;
+  transform: scale(1.01);
+}
+
+.pending-badge {
+  display: inline-block;
+  background-color: #eff6ff;
+  color: #1a56db;
+  border: 1px solid #bfdbfe;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+  animation: pulseGlow 3s infinite;
+}
+
+.footer { 
+  background-color: #ffffff; 
+  border-top: 1px solid #e2e8f0; 
+  padding: 35px 20px; 
+  text-align: center; 
+  font-size: 14px; 
+  color: #64748b; 
+  margin-top: 60px; 
+}
+
+.footer a { 
+  color: #1a56db; 
+  text-decoration: none; 
+  margin: 0 8px; 
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+@media (max-width: 768px) {
+  .header { padding: 15px 20px; }
+  .nav { flex-direction: column; align-items: flex-start; }
+  .nav-links { gap: 10px; width: 100%; justify-content: flex-start; }
+  .section-block { padding: 25px; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="nav">
+    <a href="index.htm" class="logo">Muted<span>Minds</span></a>
+    <ul class="nav-links">
+      <li><a href="index.htm">Home</a></li>
+      <li><a href="about.htm">About</a></li>
+      <li><a href="statistics.htm" class="active">Statistics</a></li>
+      <li><a href="solutions.htm">Solutions</a></li>
+      <li><a href="interactive.htm">Interactive</a></li>
+      <li><a href="interview.htm">Interview</a></li>
+      <li><a href="FAQ.htm">FAQ</a></li>
+      <li><a href="contact.htm">Contact</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="container">
+
+  <h1 style="color: #0a2540; font-size: 32px; margin-top: 0;">Adolescents &amp; Social Media in Numbers</h1>
+  <p style="font-size: 18px; color: #475569;">Analyzing usage frequency, psychological self-reports, and sleep impact figures among teenagers.</p>
+
+  <div class="card-grid">
+    <div class="card card-blue">
+      <div id="interactiveSubmissionCount" class="stat-number">0</div>
+      <div class="stat-label">Interactive Responses</div>
+      <p style="margin-bottom: 0;">Total responses submitted through our Interactive survey form.</p>
+    </div>
+    <div class="card card-blue">
+      <div class="stat-number">95%</div>
+      <div class="stat-label">Smartphone Access</div>
+      <p style="margin-bottom: 0;">Nearly all teens have personal access to smartphones, making digital media a dominant daily environment.</p>
+    </div>
+    <div class="card card-blue">
+      <div class="stat-number">3.5h</div>
+      <div class="stat-label">Daily Average Use</div>
+      <p style="margin-bottom: 0;">The average total time teenagers report spending actively scrolling social feeds each day.</p>
+    </div>
+  </div>
+
+  <div class="section-block" style="margin-top: 40px;">
+    <h2 class="section-title">Screen Time Breakdown by Platform</h2>
+    <p>Different platforms present varying psychological risks depending on whether content is visual, text-driven, or video-focused.</p>
+    
+    <div class="placeholder-box">
+      <span class="pending-badge">Status: Pending</span><br />
+      <strong>[ INSERT CHART 1 HERE: PLATFORM USAGE BREAKDOWN ]</strong>
+      <br /><em>Example: Pie chart or bar graph comparing time spent on TikTok, Instagram, YouTube, Snapchat</em>
+    </div>
+  </div>
+
+  <div class="card-grid">
+    <div class="card card-blue">
+      <div class="stat-number">60%</div>
+      <div class="stat-label">Late-Night Scrolling</div>
+      <p style="margin-bottom: 0;">Teens who keep devices in their bedrooms report scrolling after planned sleep times at least 3 nights per week.</p>
+    </div>
+    <div class="card card-blue">
+      <div class="stat-number">32%</div>
+      <div class="stat-label">Positive Connection</div>
+      <p style="margin-bottom: 0;">Report feeling more connected to close friends through group chats and shared media during stressful periods.</p>
+    </div>
+    <div class="card card-blue">
+      <div class="stat-number">46%</div>
+      <div class="stat-label">Body Image Impact</div>
+      <p style="margin-bottom: 0;">Of surveyed teens report that social posts make them feel worse about their body or appearance.</p>
+    </div>
+  </div>
+
+  <div class="section-block" style="margin-top: 40px;">
+    <h2 class="section-title">Correlation: Screen Hours vs. Mood Indicators</h2>
+    <p>Studies indicate a non-linear relationship: moderate usage (under 1-2 hours) shows minor impact, while usage exceeding 3-4 hours daily correlates with higher self-reported depression and anxiety scores.</p>
+    
+    <div class="placeholder-box">
+      <span class="pending-badge">Status: Pending</span><br />
+      <strong>[ INSERT CHART 2 HERE: CORRELATION GRAPH ]</strong>
+      <br /><em>Example: Line graph comparing hours of daily use vs. self-reported stress levels</em>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <p>&copy; 2026 Muted Minds Project | <a href="index.htm">Home</a> | <a href="about.htm">About</a> | <a href="statistics.htm">Statistics</a> | <a href="solutions.htm">Solutions</a> | <a href="interactive.htm">Interactive</a> | <a href="interview.htm">Interview</a> | <a href="FAQ.htm">FAQ</a> | <a href="contact.htm">Contact</a></p>
+</div>
+
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function() {
+    let count = localStorage.getItem('interactiveFormSubmissions') || 0;
+    document.getElementById('interactiveSubmissionCount').innerText = count;
+  });
+</script>
+
+</body>
+</html>
